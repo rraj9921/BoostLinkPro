@@ -1,0 +1,11 @@
+import { Router } from "express";
+import { authMiddleware } from "../middleware/auth.ts";
+import { getAll, getOne, create, update, remove, toggle } from "../controllers/automations.ts";
+const r = Router();
+r.get   ("/",           authMiddleware, getAll);
+r.get   ("/:id",        authMiddleware, getOne);
+r.post  ("/",           authMiddleware, create);
+r.put   ("/:id",        authMiddleware, update);
+r.delete("/:id",        authMiddleware, remove);
+r.patch ("/:id/toggle", authMiddleware, toggle);
+export default r;

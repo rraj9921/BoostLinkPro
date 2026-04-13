@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* Step 1: Tell Tailwind v4 that dark: applies when .dark is on an ancestor */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Step 2: Define CSS vars for light/dark themes */
+:root {
+  --bg:         #ffffff;
+  --bg-rgb:     255,255,255;
+  --bg2:        #F9F9F9;
+  --bg3:        #F3F3F3;
+  --card:       #ffffff;
+  --border:     #EBEBEB;
+  --border2:    #D5D5D5;
+  --text1:      #0A0A0A;
+  --text2:      #444444;
+  --text3:      #888888;
+  --text4:      #BBBBBB;
+}
+
+.dark {
+  --bg:         #0B0B0B;
+  --bg-rgb:     11,11,11;
+  --bg2:        #111111;
+  --bg3:        #1A1A1A;
+  --card:       #141414;
+  --border:     #252525;
+  --border2:    #333333;
+  --text1:      #F5F5F5;
+  --text2:      #AAAAAA;
+  --text3:      #666666;
+  --text4:      #333333;
+}
+
+/* Step 3: Expose CSS vars as Tailwind utility classes */
+@theme inline {
+  --color-brand:     #FF4D00;
+  --color-brandhov:  #E03D00;
+  --color-brandpale: #FFF3EE;
+
+  --color-bg:    var(--bg);
+  --color-bg2:   var(--bg2);
+  --color-bg3:   var(--bg3);
+  --color-card:  var(--card);
+  --color-bdr:   var(--border);
+  --color-bdr2:  var(--border2);
+  --color-t1:    var(--text1);
+  --color-t2:    var(--text2);
+  --color-t3:    var(--text3);
+  --color-t4:    var(--text4);
+
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Step 4: Base body styles */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text1);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.2s ease;
+}
+
+/* Step 5: Custom animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-8px); }
+}
+
+.animate-fadeup   { animation: fadeUp  0.65s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-marquee  { animation: marquee 40s linear infinite; }
+.animate-float    { animation: float   5s ease-in-out infinite; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.34s; }
+.delay-5 { animation-delay: 0.46s; }
