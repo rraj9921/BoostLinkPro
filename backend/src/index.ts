@@ -5,14 +5,14 @@ import helmet from "helmet";
 import morgan from "morgan";
 import { rateLimit } from "express-rate-limit";
 
-import webhookRoutes from "./routes/webhooks.ts";
-import authRoutes from "./routes/auth.ts";
-import instagramRoutes from "./routes/instagram.ts";
-import automationRoutes from "./routes/automations.ts";
-import productRoutes from "./routes/products.ts";
-import analyticsRoutes from "./routes/analytics.ts";
-import bioLinksRoutes from "./routes/bioLinks.ts";
-import profileRoutes from "./routes/profile.ts";
+import webhookRoutes from "./routes/webhooks.js";
+import authRoutes from "./routes/auth.js";
+import instagramRoutes from "./routes/instagram.js";
+import automationRoutes from "./routes/automations.js";
+import productRoutes from "./routes/products.js";
+import analyticsRoutes from "./routes/analytics.js";
+import bioLinksRoutes from "./routes/bioLinks.js";
+import profileRoutes from "./routes/profile.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
