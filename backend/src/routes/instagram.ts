@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { authMiddleware } from "../middleware/auth.ts";
-import { getAccount, connectCallback, disconnect, getPosts } from "../controllers/instagram.ts";
+import { authMiddleware } from "../middleware/auth";
+import { getAccount, connectCallback, disconnect, getPosts } from "../controllers/instagram";
 const r = Router();
 r.get   ("/account",       authMiddleware, getAccount);
 r.get   ("/auth/callback", authMiddleware, connectCallback);

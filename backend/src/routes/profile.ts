@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getPublicProfile } from "../controllers/profile.ts";
+import { getPublicProfile } from "../controllers/profile";
 
 const r = Router();
 

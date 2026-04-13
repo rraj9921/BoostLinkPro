@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { supabase } from "../config/supabase.ts";
+import { supabase } from "../config/supabase";
 
 /**
  * GET /api/profile/:username

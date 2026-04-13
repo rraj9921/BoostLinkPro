@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import type { AuthRequest } from "../middleware/auth.js";
-import { supabase } from "../config/supabase.ts";
+import { supabase } from "../config/supabase";
 import multer from "multer";
 import * as z from "zod";
 

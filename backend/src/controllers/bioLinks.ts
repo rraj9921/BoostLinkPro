@@ -1,6 +1,6 @@
 import type { Response } from "express";
-import type { AuthRequest } from "../middleware/auth.ts";
-import { supabase } from "../config/supabase.ts";
+import type { AuthRequest } from "../middleware/auth";
+import { supabase } from "../config/supabase";
 
 /**
  * GET /api/bio-links

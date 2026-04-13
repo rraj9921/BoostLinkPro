@@ -1,6 +1,6 @@
 // ─── routes/products.ts (replaces the stub) ──────────────────────────────────
 import { Router } from "express";
-import { authMiddleware } from "../middleware/auth.ts";
+import { authMiddleware } from "../middleware/auth";
 import {
   getAll,
   getPublic,
@@ -9,7 +9,7 @@ import {
   remove,
   toggleActive,
   upload,
-} from "../controllers/products.ts";
+} from "../controllers/products";
 
 const r = Router();
 

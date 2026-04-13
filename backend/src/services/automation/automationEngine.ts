@@ -1,5 +1,5 @@
-import { supabase } from "../../config/supabase.ts";
-import { dmQueue } from "../../jobs/queues.ts";
+import { supabase } from "../../config/supabase";
+import { dmQueue } from "../../jobs/queues";
 
 export interface CommentEventData {
   igAccountId:       string;

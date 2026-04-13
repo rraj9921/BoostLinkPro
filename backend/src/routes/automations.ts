@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { authMiddleware } from "../middleware/auth.ts";
-import { getAll, getOne, create, update, remove, toggle } from "../controllers/automations.ts";
+import { authMiddleware } from "../middleware/auth";
+import { getAll, getOne, create, update, remove, toggle } from "../controllers/automations";
 const r = Router();
 r.get   ("/",           authMiddleware, getAll);
 r.get   ("/:id",        authMiddleware, getOne);

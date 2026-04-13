@@ -1,8 +1,8 @@
 import "dotenv/config";
 import { Worker, type Job } from "bullmq";
-import { redis } from "./queues.ts";
+import { redis } from "./queues";
 import axios from "axios";
-import { supabase } from "../config/supabase.ts";
+import { supabase } from "../config/supabase";
 
 const GRAPH = "https://graph.instagram.com/v18.0";
 

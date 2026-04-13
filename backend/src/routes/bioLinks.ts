@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authMiddleware } from "../middleware/auth.ts";
+import { authMiddleware } from "../middleware/auth";
 import {
   getAll,
   create,
@@ -7,7 +7,7 @@ import {
   remove,
   reorder,
   toggleActive,
-} from "../controllers/bioLinks.ts";
+} from "../controllers/bioLinks";
 
 const r = Router();
 

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import type { Request, Response } from "express";
 import crypto from "crypto";
-import { processCommentEvent } from "../services/automation/automationEngine.ts";
+import { processCommentEvent } from "../services/automation/automationEngine";
 
 const router = Router();
 
